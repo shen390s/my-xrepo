@@ -8,7 +8,7 @@ package("c-capnproto")
 
     add_links("capnpc-c")
 
-    add_deps("cmake")
+    add_deps("cmake", "gcc")
 
     on_install(function (package)
         local configs = {"-DBUILD_TESTING=OFF -DCMAKE_C_COMPILER=gcc"}
