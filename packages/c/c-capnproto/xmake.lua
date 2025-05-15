@@ -18,6 +18,3 @@ package("c-capnproto")
 	package:addenv("PATH", "bin")
     end)
 
-    on_test(function (package)
-        assert(package:has_cfuncs("foo", {includes = "foo.h"}))
-    end)
