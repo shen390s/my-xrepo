@@ -12,10 +12,10 @@ package("elogind")
 
     on_install(function (package)
         local configs = {}
-        table.insert(configs, "--enable-shared=" .. (package:config("shared") and "yes" or "no"))
-        if package:is_debug() then
-            table.insert(configs, "--enable-debug")
-        end
+--        table.insert(configs, "--enable-shared=" .. (package:config("shared") and "yes" or "no"))
+--        if package:is_debug() then
+--            table.insert(configs, "--enable-debug")
+--        end
         import("package.tools.autoconf").install(package, configs)
     end)
 
