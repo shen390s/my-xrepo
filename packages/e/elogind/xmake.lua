@@ -1,6 +1,6 @@
 package("elogind")
     set_homepage("https://github.com/elogind/elogind")
-    set_description("The systemd project's "logind", extracted to a standalone package")
+    set_description("The systemd project's \"logind\", extracted to a standalone package")
     set_license("GPL-2.0")
 
     add_urls("https://github.com/elogind/elogind/archive/refs/tags/$(version).tar.gz",
