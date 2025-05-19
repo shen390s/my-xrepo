@@ -9,7 +9,8 @@ package("elogind")
     add_versions("v255.17", "a9725ae3f73f8d910de84c108bc11bfd4c782bef6a4190b2ec70c5d2f22344db")
 
     add_deps("meson", "gperf", "ninja")
---    add_deps("libcap")
+    add_deps("pkg-config")
+    add_deps("libcap")
 
     on_install(function (package)
         local configs = {}
