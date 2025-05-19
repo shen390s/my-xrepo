@@ -8,15 +8,15 @@ package("elogind")
 
     add_versions("v255.17", "a9725ae3f73f8d910de84c108bc11bfd4c782bef6a4190b2ec70c5d2f22344db")
 
-    add_deps("autoconf", "automake", "libtool", "gperf", "meson", "ninja")
+    add_deps("meson", "gperf", "ninja")
     add_deps("libcap")
 
     on_install(function (package)
         local configs = {}
---        table.insert(configs, "--enable-shared=" .. (package:config("shared") and "yes" or "no"))
---        if package:is_debug() then
---            table.insert(configs, "--enable-debug")
---        end
-        import("package.tools.autoconf").install(package, configs)
+        table.insert(configs, "--enable-shared=" .. (package:config("shared") and "yes" or "no"))
+        if package:is_debug() then
+            table.insert(configs, "--enable-debug")
+        end
+        import("package.tools.meson").install(package, configs)
     end)
 
