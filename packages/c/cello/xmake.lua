@@ -16,7 +16,7 @@ package("cello")
                 add_files("src/*.c")
                 add_headerfiles("include/(*.h)")
         ]])
-        import("package.tools.xmake").install(package)
+        import("package.tools.make").install(package)
     end)
 
     on_test(function (package)
